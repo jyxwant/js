@@ -14,17 +14,17 @@
         </ul>
         <p >this just a test</p>
     <script type="text/javascript">
-        alert(typeof document.getElementById("purchases")); //getElementBtId() 通过id来获取元素对象
-        alert(document.getElementsByTagName('li')[0]); //getElementsBtTagName() 通过标签来获取元素对象
-        var pares = document.getElementsByTagName('p');
-        for(i=0;i<pares.length;i++)
+        alert(typeof document.getElementById('purchases')) //getElementBtId() 通过id来获取元素对象
+        alert(document.getElementsByTagName('li')[0]) //getElementsBtTagName() 通过标签来获取元素对象
+        var pares = document.getElementsByTagName('p')
+        for(var i=0;i<pares.length;i++)
         {
             if(pares[i].getAttribute('title')!=null) 
-                alert(pares[i].getAttribute('title'));
+                alert(pares[i].getAttribute('title'))
             else
             {
-                pares[i].setAttribute('title',i+1+'');
-                alert(pares[i].getAttribute('title'));
+                pares[i].setAttribute('title',i+1+'')
+                alert(pares[i].getAttribute('title'))
                 
             }
         }  //显示标签某个属性的内容

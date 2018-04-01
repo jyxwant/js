@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <title>open new window</title>
+        <script type="text/javascript" src="onclick_show_ect.js"></script>
+    </head>
+    <body>
+        <div style="display:flex;flex-direction:column;">
+            <a href="image.html" id="open_window" onclick="open_new();return false">Open A new window</a>  
+            <a href="javascript:open_this(\"http:www.baidu.com\")"> open_fail </a>  <!--老师,这个为什么不行啊，转义字符没有用-->
+            <a href="javascript:open_this('http:www.baidu.com')"> open_success </a>
+        </div>   
+    </body>
+</html>
