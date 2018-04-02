@@ -2,30 +2,55 @@
     <head>
         <title>Image Box</title>
     </head>
-    <body>
-        <table>
+    <body style="padding:0px; border:0px;">
+        <ul id="imgtable"> <!--table的子元素不包括下面这些-->
             <li>
-                <a href="rose.jpg" title="a red red rose" onclick="show(this);return false">Rose</a>
+                <a href="rose.jpg" title="a red red rose" >Rose</a>
             </li>
             <li>
-                <a href="apple.jpg" title="a tasty apple" onclick="show(this);return false">Apple</a>
+                <a href="apple.jpg" title="a tasty apple" >Apple</a>
             </li>
             <li>
-                <a href="dog.jpg" title="a cute dog" onclick="show(this);return false">Dog</a>
+                <a href="dog.jpg" title="a cute dog" >Dog</a>
             </li>
-        </table>
+        </ul>
         <p id="here_show_text">Please Choose an Image</p>
-        <img src="null" title="here_show_img" id="here_show_img" />
+        <img src="#" title="here_show_img" id="here_show_img" width="400px" height="300px" />
         <script>
             function show(which_image){
-                var image_href= which_image.getAttribute("href");
-                var test=which_image.getAttribute("title");
-                var show_image=document.getElementById("here_show_img");
-                show_image.setAttribute("src",image_href);
-                var show_test=document.getElementById("here_show_text");
-                show_test.childNodes[0].nodeValue=test;
+                var image_href= which_image.getAttribute('href')
+                var test=which_image.getAttribute('title')
+                var show_image=document.getElementById('here_show_img')
+                show_image.setAttribute('src',image_href)
+                var show_test=document.getElementById('here_show_text')
+                show_test.childNodes[0].nodeValue=test
+            }
 
-
+            function prepareGallery(){
+                if(!document.getElementById)return false
+                if(!document.getElementsByTagName)return false
+                if(!document.getElementById('imgtable'))return false
+                var imggallery=document.getElementById('imgtable')
+                var alink=imggallery.getElementsByTagName('a')
+                for(var i=0;i<alink.length;i++){
+                    alink[i].onclick=function(){
+                        show(this)
+                        return false
+                    }
+                }
+            }
+            addeventonload(prepareGallery())
+            function addeventonload(func){
+                var oldonload=window.onload
+                if(typeof window.onload!='function'){
+                    window.onload=func
+                }
+                else{
+                    window.onload=function(){
+                        oldonload()
+                        func()
+                    }
+                }
             }
         </script>
     </body>

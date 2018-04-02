@@ -7,7 +7,7 @@
     <body>
         <div style="display:flex;flex-direction:column;">
             <a href="image.html" id="open_window" onclick="open_new();return false">Open A new window</a>  
-            <a href="javascript:open_this(\"http:www.baidu.com\")"> open_fail </a>  <!--老师,这个为什么不行啊，转义字符没有用-->
+            <a href="javascript:open_this(&quot http:www.baidu.com&quot)"> open_fail </a>  <!--老师,这个为什么不行啊，转义字符没有用-->
             <a href="javascript:open_this('http:www.baidu.com')"> open_success </a>
         </div>   
     </body>
