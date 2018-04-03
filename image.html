@@ -1,21 +1,32 @@
 <html>
     <head>
         <title>Image Box</title>
+        <link rel="stylesheet" href="gallery.css" type="text/css" media="screen" />
     </head>
     <body style="padding:0px; border:0px;">
+    
+        <p id="here_show_text">Please Choose an Image</p>
         <ul id="imgtable"> <!--table的子元素不包括下面这些-->
             <li>
-                <a href="rose.jpg" title="a red red rose" >Rose</a>
+                <a href="rose.jpg" title="a red red rose" >
+                    <img src="rose.jpg" />
+                </a>
             </li>
             <li>
-                <a href="apple.jpg" title="a tasty apple" >Apple</a>
+                <a href="apple.jpg" title="a tasty apple" >
+                    <img src="apple.jpg" />
+                </a>
             </li>
             <li>
-                <a href="dog.jpg" title="a cute dog" >Dog</a>
+                <a href="dog.jpg" title="a cute dog" >
+                    <img src="dog.jpg" />
+                </a>
             </li>
         </ul>
-        <p id="here_show_text">Please Choose an Image</p>
+      
+        
         <img src="#" title="here_show_img" id="here_show_img" width="400px" height="300px" />
+        
         <script>
             function show(which_image){
                 var image_href= which_image.getAttribute('href')
