@@ -38,5 +38,14 @@ function deleteelement(){
     }
     
 }
+function insertafter(newelement,targetelement){
+    var parent=targetelement.parentNode
+    if(targetelement==parent.lastChild){
+        parent.appendChild(newelement)
+    }else{
+        parent.insertbefore(newelement,targetelement.nextSibling)
+    }
+}
+
 addonlaod(addelement)
 addonlaod(deleteelement)
