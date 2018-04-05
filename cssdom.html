@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>CSSDOM</title>
+    </head>
+    <body>
+        <p id="example" style="color:rgba(178, 34, 34, 0.486);font-family:Arial, Helvetica, sans-serif;background-Color:rgba(112, 193, 224,0.712);">This is an example</p>
+        
+       <script>
+            var para=document.getElementById('example')
+            alert('typeof para.style='+typeof para.style)
+            alert('typeof para.nodeName='+typeof para.nodeName)
+            alert('para.style.color='+para.style.color)
+            alert('para.style.fontFamily='+typeof para.style.fontFamily)
+            alert('para.style.backgroundColor='+para.style.backgroundColor)
+        </script>
+    </body>
+</html>

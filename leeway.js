@@ -41,4 +41,22 @@ function displayabbreviations(){
     document.body.appendChild(dlist)
 }
 
+function displaycite(){
+    var blockquot =document.getElementsByTagName('blockquote')
+    if (blockquot.length<1) return false
+    for (var i=0;i<blockquot.length;i++){
+        var current_block = blockquot[i]
+        if(!current_block.getAttribute('cite')){
+            continue
+        }
+        var url = current_block.getAttribute('cite')
+        var key=document.createElement('a')
+        var source=document.createTextNode('source')
+        key.appendChild(source)
+        key.setAttribute('href',url)
+        blockquot[i].appendChild(key)
+    }
+  
+}
+addonlaod(displaycite)
 addonlaod(displayabbreviations)
