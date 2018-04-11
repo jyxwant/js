@@ -44,8 +44,9 @@
                 var imggallery=document.getElementById('imgtable')
                 var alink=imggallery.getElementsByTagName('a')
                 for(var i=0;i<alink.length;i++){
-                    alink[i].onclick=function(){
+                    alink[i].onmouseover=function(){
                         show(this)
+                        
                         return false
                     }
                 }

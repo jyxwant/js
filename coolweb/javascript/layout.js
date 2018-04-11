@@ -1,0 +1,9 @@
+var navigation=document.getElementById('navigation')
+var logo=document.getElementById('header')
+var logoimg=logo.getElementsByTagName('img')
+var img_width=logoimg[0].width
+navigation.style.width=''+img_width+'px'
+var div_1=document.getElementById('flex').getElementsByTagName('div')[0]
+div_1.style.width=logoimg[0].x+'px'
+div_1.style.height=navigation.style.height
+var a=0

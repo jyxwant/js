@@ -1,0 +1,49 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+#header{
+    text-align: center;
+}
+#header img{
+    margin: 0 auto;
+}
+#navigation{
+    background-image: url("../imgae/good.png");
+    background-repeat:repeat-x;
+    background-position: bottom right;
+    border-width:.1em;
+    border-style:solid;
+    border-bottom-width: 0ch;
+    border-top-width: 0;
+    padding-left:0px;
+    padding-right:0px;
+    text-align: center;
+}
+#navigation ul{
+    width: 100%;
+    overflow:hidden;
+    border-left-width:.1em;
+    border-left-style:solid;
+    margin: 0 auto;
+}
+#navigation li{
+    display: inline;
+}
+#navigation li a{
+    display: block;
+    float: left;
+    padding:.5em 2em;
+    border-right:.1em solid;
+}
+#flex{
+    display: flex;
+    flex-direction:column;
+}
+#content{
+    border-width:.1em;
+    border-style:solid;
+    border-top-width:0;
+    padding:2em 10%;
+    line-height: 1.8em;
+}
