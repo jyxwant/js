@@ -25,7 +25,8 @@
     overflow:hidden;
     border-left-width:.1em;
     border-left-style:solid;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 #navigation li{
     display: inline;
@@ -35,10 +36,14 @@
     float: left;
     padding:.5em 2em;
     border-right:.1em solid;
+    margin-left:0;
+    margin-right: 0%;
+    padding-left:0;
+    padding-right: 0%;
 }
 #flex{
     display: flex;
-    flex-direction:column;
+    flex-direction:row;
 }
 #content{
     border-width:.1em;
@@ -46,4 +51,19 @@
     border-top-width:0;
     padding:2em 10%;
     line-height: 1.8em;
+    margin-left:auto;
+    margin-right: auto;
+    padding-left:0;
+    padding-right: 0%;
+    
+}
+#section{
+    font-family:"Helvetica Neue", Helvetica, Arial, "PingFang SC", 
+    "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+    font-style: italic;
+    margin-left:auto;
+    margin-right: auto;
+    padding-left:0;
+    padding-right: 0%;
+    width: 80%;
 }
