@@ -3,6 +3,7 @@ var logoimg=document.getElementById('logo')
 var content=document.getElementById('content')
 var img_width=logoimg.width
 var li_count=navigation.getElementsByTagName('a')
+var movement
 
 for(var i=0;i<li_count.length;i++){
     var li_child=li_count[i]
@@ -39,6 +40,7 @@ function change(){
         }
     }    
 }
+
 function addonlaod(func){
     var check=window.onload
     if(typeof check!='function'){
@@ -52,7 +54,66 @@ function addonlaod(func){
     }
     
 }
+
+
+
+function animation_rick(){
+	if(!document.getElementById) return false
+    if(!document.getElementsByTagName) return false
+	var animationrick=document.getElementById('animation_rick')
+	var animationmorty=document.getElementById('animation_morty')
+	animationrick.onmouseover=function(){
+		move1()		
+	}
+	animationrick.onmouseout=function(){
+        clearTimeout(movement)
+	}
+	animationmorty.onmouseover=function(){
+		move2()		
+	}
+	animationmorty.onmouseout=function(){
+        clearTimeout(movement)
+	}
+}
+var counti=0
+var finalnumber=15
+function move1(){
+	var animationrick=document.getElementById('animation_rick')
+	if(counti<2){
+		animationrick.style.left=finalnumber+'%'
+		finalnumber=finalnumber-0.1
+		counti=counti+1
+		var string='move1()'
+		movement=setTimeout(string,100)		
+	}
+	else if(counti>0){
+		animationrick.style.left=finalnumber+'%'
+		finalnumber=finalnumber+0.1
+		counti=counti-1
+		var string='move1()'
+		movement=setTimeout(string,100)
+	}
+}
+var counti_morty=0
+var finalnumber_morty=47
+function move2(){
+	var animationmorty=document.getElementById('animation_morty')
+	if(counti_morty<2){
+		animationmorty.style.left=finalnumber_morty+'%'
+		finalnumber_morty=finalnumber_morty-0.1
+		counti_morty=counti_morty+1
+		var string='move2()'
+		movement=setTimeout(string,100)		
+	}
+	else if(counti_morty>0){
+		animationmorty.style.left=finalnumber_morty+'%'
+		finalnumber_morty=finalnumber_morty+0.1
+		counti_morty=counti_morty-1
+		var string='move2()'
+		movement=setTimeout(string,100)
+	}
+}
+
 addonlaod(change)
 addonlaod(highlightPage)
-
-
+addonlaod(animation_rick)

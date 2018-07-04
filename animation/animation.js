@@ -64,7 +64,7 @@ function addload(func){
         }
     }
 }
-addload(move)
+
 addload(cancel)
 
 
