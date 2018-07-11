@@ -14,7 +14,7 @@ content.style.width = ""+img_width+"px";
 var div_1 = document.getElementById("flex").getElementsByTagName("div")[0];
 var a = logoimg.offsetLeft;
 div_1.style.width = a;
-div_1.style.height = window.getComputedStyle(navigation,null)["height"];
+div_1.style.height = window.getComputedStyle(navigation, null)["height"];
 function highlightPage(){
 	if(!document.getElementsByTagName)return false;
 	if(!document.getElementById) return false;
@@ -84,14 +84,14 @@ function move1(){
 		finalnumber = finalnumber-0.1;
 		counti = counti+1;
 		var string = "move1()";
-		movement = setTimeout(string,100);		
+		movement = setTimeout(string, 100);		
 	}
 	else if(counti>0){
 		animationrick.style.left = finalnumber+"%";
 		finalnumber = finalnumber+0.1;
 		counti = counti-1;
 		string = "move1()";
-		movement = setTimeout(string,100);
+		movement = setTimeout(string, 100);
 	}
 }
 var counti_morty = 0;
@@ -103,14 +103,14 @@ function move2(){
 		finalnumber_morty = finalnumber_morty-0.1;
 		counti_morty = counti_morty+1;
 		var string = "move2()";
-		movement = setTimeout(string,100);		
+		movement = setTimeout(string, 100);		
 	}
 	else if(counti_morty>0){
 		animationmorty.style.left = finalnumber_morty+"%";
 		finalnumber_morty = finalnumber_morty+0.1;
 		counti_morty = counti_morty-1;
 		string = "move2()";
-		movement = setTimeout(string,100);
+		movement = setTimeout(string, 100);
 	}
 }
 

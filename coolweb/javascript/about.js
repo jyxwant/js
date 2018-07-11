@@ -1,4 +1,3 @@
-
 var rm = document.getElementById("rm");
 rm.onmousemove = function(){
 	if(!document.getElementById)return false;
@@ -6,7 +5,7 @@ rm.onmousemove = function(){
 	if(!document.getElementById("rm"))return false; 
 	var rmleft = rm.x;
 	var rmwidth = rm.width;
-	var mouse_x = window.event.clientX;
+	var mouse_x = Window.event.clientX;
 	var p1 = document.getElementById("p1");
 	var p2 = document.getElementById("p2");
 	var p3 = document.getElementById("p3");
@@ -20,4 +19,4 @@ rm.onmousemove = function(){
 		p2.style.display = "none";
 		p3.style.display = "block";
 	}
-};
+}; 
