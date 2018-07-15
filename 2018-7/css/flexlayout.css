@@ -1,0 +1,24 @@
+#table{
+    display: flex;
+    flex-direction: column;
+}
+.work_row{
+    display: flex;
+    flex-direction: row;
+}
+.time{
+    flex: 1;
+    flex-grow: 1;
+}
+.plan{
+    text-align: center;
+    flex: 24;
+    flex-grow: 24;
+}
+.finish{
+    flex: 1;
+    flex-grow: 1;
+}
+div{
+    border: solid aliceblue;
+}

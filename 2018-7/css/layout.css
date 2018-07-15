@@ -1,0 +1,22 @@
+#table{
+    display: flex;
+}
+
+#table tbody{
+    flex-grow: 1;
+}
+#table tr{
+    flex-grow: 1;
+}
+#th_time{
+    flex: 1;
+    flex-grow: 1;
+}
+#th_plan{
+    flex: 24;
+    flex-grow: 24;
+}
+#th_finsih{
+    flex: 1;
+    flex-grow: 1;
+}
