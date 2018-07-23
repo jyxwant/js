@@ -14,10 +14,24 @@
     text-align: center;
     flex: 24;
     flex-grow: 24;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    
+}
+.plan1{
+    text-align: center;
+    flex: 24;
+    flex-grow: 24;
+    
 }
 .finish{
     flex: 1;
     flex-grow: 1;
+}
+a:hover{
+    color: brown;
+   
 }
 div{
     border: solid aliceblue;

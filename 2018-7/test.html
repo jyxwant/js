@@ -1,0 +1,44 @@
+
+<html>
+<head>
+	<script type="text/javascript">
+		function mfunction(){
+		var mButton=document.getElementById("up");
+		mButton.onclick = function() {
+			if(document.getElementById("up").className==="up"){
+				document.getElementById("up").className="down"
+			}else{
+				document.getElementById("up").className="up"
+			}
+			document.body.focus();
+			}
+		}
+		window.onload=function(){
+			mfunction();
+		}
+	</script>
+	<style type="text/css">
+	.up{
+		width:160px;
+		text-align:center;
+		border-right:#222 3px solid;
+		border-top:#ddd 3px solid;
+		border-left:#ddd 3px solid;
+		border-bottom:#222 3px solid;
+		background-color：#ccc；
+	}
+	.down{
+		width:160px;
+		text-align:center;
+		border-left:#222 3px solid;
+		border-bottom:#ddd 3px solid;
+		border-right:#ddd 3px solid;
+		border-top:#222 3px solid;
+		background-color：#ccc；
+	}
+	</style>
+</head>
+<body>
+	<div id="up" onclick="click()">有立体效果的按钮</div>
+</body>
+</html>
